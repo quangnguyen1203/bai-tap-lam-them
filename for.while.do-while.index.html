@@ -16,25 +16,39 @@
         //     }
         //     alert("Đây là số nguyên dương")
         // }
-        // function useWhile(){
-        //     let a = Number(prompt("Nhập một số bất kì: "));
-        //     while(isNaN(a) || a<0 || !Number.isInteger(a)){
-        //         alert("Đây không phải là số nguyên dương")
-        //         a = Number(prompt("Nhập một số bất kì: "))
-        //     }
-        //     alert("Đây là số nguyên dương")
-        // }
-        function useDoWhile(){
-            let a ;
-            do {
-                a = Number(prompt("Nhập một số bất kì: "));
+        // // function useWhile(){
+        // //     let a = Number(prompt("Nhập một số bất kì: "));
+        // //     while(isNaN(a) || a<0 || !Number.isInteger(a)){
+        // //         alert("Đây không phải là số nguyên dương")
+        // //         a = Number(prompt("Nhập một số bất kì: "))
+        // //     }
+        // //     alert("Đây là số nguyên dương")
+        // // }
+        // function useDoWhile(){
+        //     let a ;
+        //     do {
+        //         a = Number(prompt("Nhập một số bất kì: "));
 
-            } while(isNaN(a) || a<0 || !Number.isInteger(a));
-            alert("Đây là số nguyên dương");
-        }
-        useDoWhile();
-        // useFor()
-        //useWhile()
+        //     } while(isNaN(a) || a<0 || !Number.isInteger(a));
+        //     alert("Đây là số nguyên dương");
+        // }
+        // useDoWhile();
+        // // useFor()
+        // //useWhile()
+        // Cách 2
+        let a;
+        // for(; a<0 || a != parseInt(a) ;){
+        //     a = prompt("Nhập số: ")
+        // }
+        // alert("Đây là số nguyên dương")
+        // while ( a<0 || a != parseInt(a)){
+        //     a = prompt("Nhập số: ")
+        // }
+        // alert("Đây là số nguyên dương")
+        do{
+            a = prompt("Nhập số: ")
+        } while ( a<0 || a != parseInt(a));
+        alert("Đây là số nguyên dương")
     </script>
 </body>
 </html>
