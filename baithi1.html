@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //Sinh ra mot mang gom size
+      function gerenateArray(size, min, max) {
+        var arr = [];
+        for (let i = 0; i <= size; i++) {
+          arr.push(Math.floor(Math.random() * max - min + 1) + min);
+        }
+        return arr;
+      }
+      //Hien thi gia tri trong mang
+      function printArray(arr) {
+        let print = arr.join("-");
+        return print;
+      }
+      //Thiet Ke ham find(value, arr)
+      function findArray(value, arr) {
+        for (let i = 0; i < arr.length; i++) {
+          if (arr[i] == value) {
+            return i;
+          }
+        }
+        return -1;
+      }
+      //Thiet Ke Ham Xoa Gia tri
+      function removeAll(value, arr) {
+        for (let i = 0; i < arr.length; i++) {
+          if (arr[i] == value) {
+            arr.splice(i, 1);
+            return arr;
+          }
+        }
+        return arr;
+      }
+      //Ham kiem tra so nguyen duong
+      function inputInterger(msg) {
+        let number = 0;
+        do {
+          number = Number(prompt(msg));
+        } while (isNaN(number) || !Number.isInteger(number) || number <= 0);
+        return number;
+      }
+      //Xay dug ham main
+      function main() {
+        let size = inputInterger("Input value size: ");
+        let min = inputInterger("Input value min: ");
+        let max = inputInterger("Input value max: ");
+        arr = gerenateArray(size,min,max);
+      }
+      let arr;
+      main();
+      document.write(arr)
+      let value = inputInterger("Input value");
+
+      document.write("<br>");
+
+      document.write(printArray(arr));
+
+      document.write("<br>");
+
+      document.write(findArray(value,arr)); 
+      
+      document.write("<br>");
+
+      document.write(removeAll(value,arr));
+        // function gerenateArray(size,min,max){
+        //     let arr = [];
+        //     for(let i=0;i<size;i++){
+        //         arr.push(Math.floor(Math.random()*(max-min+1) + min));
+        //     }
+        //     return arr;
+        // }
+        // function printArray(arr){
+        //     let print = arr.join("-");
+        //     return print;
+        // }
+        // function findArray(value,arr){
+        //     for(let i=0;i< arr.length;i++){
+        //       if(arr[i]==value){
+        //         return i;
+        //       }
+        //     }
+        //     return -1;
+        // }
+        // function removevalueinArr(value,arr){
+        //     for( let i = 0; i < arr.length; i++){
+        //       if(arr[i]==value){
+        //           arr.splice(i,1);
+        //           return arr
+        //       }
+        //     }
+        //     return arr
+        // }
+
+    </script>
+  </body>
+</html>

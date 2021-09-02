@@ -1,8 +1,17 @@
-.container{
-    width: 80%;
-    margin: auto;
+label{
+    margin-bottom: 10px;
 }
-body{
-    width: 100%;
-    background-color: rgb(198, 203, 218);
+
+.col-lg-6 {
+    margin-top: 30px;
+}
+
+.btn-primary {
+    color: #0d6efd;
+    background-color: white;
+    border-color: #0d6efd;
+    margin-top: 30px;
+}
+table{
+    margin-top: 20px;
 }
